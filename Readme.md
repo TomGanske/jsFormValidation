@@ -5,9 +5,23 @@
 - Author Tom Ganske
 
 
-## Improve your Front-End form behavior with jsFormValidation
+## Improve your Front-End form behavior with jsFormValidation (no jQuery!)
 
-Thats the first version of jsFormValidation with a size of 4 kByte and will be improved. **jsFormValidation** supports fields like (text,date,number,tel,email,checkbox,radio,textarea,select,password,postcode) and multiple form controlling on one website.
+Thats the first version of jsFormValidation with a size of **4KB** and will be improved.
+**jsFormValidation** field support:
+- text
+- date
+- number
+- tel
+- email
+- checkbox
+- radio
+- textarea
+- select
+- password
+- postcode
+
+jsFormValidaton supports also multiple form definitions on one website.
 
 By **deactivated javascript** the standard behavior off **css** will be replaced the functionality.
 
