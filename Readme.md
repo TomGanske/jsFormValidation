@@ -88,7 +88,7 @@ Most forms are validate on server side. Thats truly a bad scenario in the mobile
 
 ## Installation
 
-1. Init form by setup a form id. Example: <form **id="demo"**>
+1. Init form by setup a form id. Example: < form **id="demo"** >
 2. Suround your input form element by the label tag
 3. Set the **class="required"** attribute to the label tag, required will be replaced by valid if the form is checked true 
 3. Every form element get the **selectFunction(this)** methode depends on there action ie. onclick, onchange, onkeyup and so on
