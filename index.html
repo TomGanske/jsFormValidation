@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Validation</title>
+  <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+  <h1>Form Validation</h1>
+  <form id="demoForm">
+
+
+    <label for="topic" class="required">
+      <span>Topic</span>
+      <div class="select-wrapper required">
+        <select id="topic" onchange="selectFunction(this)" required>
+          <option selected></option>
+          <option>Case 1</option>
+          <option>Case 2</option>
+          <option>Case 3</option>
+        </select>
+      </div>
+      <ul class="rules">
+        <li>min. 1 Auswahl</li>
+      </ul>
+    </label>
+
+    <label for="postcode" class="required">
+      <span>Post Code 1</span>
+      <input type="number" id="postcode" min="1000" max="99999" onkeyup="selectFunction(this)" pattern="[^0][0-9]{3,4}" autocomplete="off" required>
+      <ul class="rules">
+        <li>minimum 4 Stellen für Östereich, maximal 5 Stellen für Deutschland</li>
+        <li>Die Postleitzahl darf nicht leer sein oder mit 0 beginnen</li>
+      </ul>
+    </label>
+
+    <label for="fistname" class="required">
+      <span>First Name</span>
+      <input type="text" id="firstname" minlength="3" maxlength="35" onkeyup="selectFunction(this)" pattern="^[a-zA-Z-äÄüÜöÖ][a-zA-Z-äÄüÜöÖ ]{2,35}" autocomplete="off" required>
+      <ul class="rules">
+        <li>minimum 3 und maximal 255 Zeichen</li>
+        <li>nur Buchstaben erlaubt</li>
+      </ul>
+      </label>
+
+      <label for="email" class="required">
+      <span>E-Mail</span>
+      <input type="email" id="email" minlength="9" maxlength="35" onkeyup="selectFunction(this)" pattern="^[a-zA-Z-äÄüÜöÖ][a-zA-Z-äÄüÜöÖ ]{9,35}" autocomplete="off" required>
+      <ul class="rules">
+        <li>minimum 9 Zeichen</li>
+        <li>ungültiges E-Mail Format</li>
+      </ul>
+    </label>
+
+      <label for="password" class="required">
+      <span>Passwort</span>
+      <input type="password" id="password" minlength="8" maxlength="35" onkeyup="selectFunction(this)" autocomplete="off" required>
+      <ul class="rules">
+        <li>min. 8 Zeichen</li>
+        <li>Groß und Kleinschreibung</li>
+        <li>min. ein Sonderzeichen</li>
+      </ul>
+    </label>
+
+    <label for="message" class="required">
+      <span>Message</span>
+      <textarea id="message" minlength="30" maxlength="255" rows="7" onkeyup="selectFunction(this)" required></textarea>
+      <ul class="rules">
+        <li>minimum 30 und maximal 255 Zeichen</li>
+        <li>Buchstaben, Zahlen und einige Sonderzeichen sind erlaubt</li>
+      </ul>
+    </label>
+
+    <fieldset class="c-radio required">
+      <span>Zahlungsmethoden</span>
+      <label for="radio">
+        <input type="radio" id="radio" value="MS" name="Zahlmethode" onclick="selectFunction(this)" required>
+        Radio
+      </label>
+      <label for="radio2">
+        <input type="radio" id="radio2" value="PP" name="Zahlmethode" onclick="selectFunction(this)">
+        Radio 2
+      </label>
+    </fieldset>
+
+    <fieldset class="c-radio required">
+      <span>Zahlungsmethoden 2</span>
+      <label for="radio3">
+        <input type="radio" id="radio3" value="MS" name="Zahlmethode2" onclick="selectFunction(this)" required>
+        Radio
+      </label>
+      <label for="radio4">
+        <input type="radio" id="radio4" value="PP" name="Zahlmethode2" onclick="selectFunction(this)">
+        Radio 2
+      </label>
+    </fieldset>
+
+   <fieldset class="c-checkbox">
+      <span>Extras</span>
+      <label for="checkbox" class="required">
+        <input type="checkbox" id="checkbox" value="agb" name="agb" onclick="selectFunction(this)" required>
+        AGB
+      </label>
+      <label for="checkbox2" class="required">
+        <input type="checkbox" id="checkbox2" value="wr" name="wr" onclick="selectFunction(this)" required>
+        Wiederruf
+      </label>
+    </fieldset>
+      <input type="submit" value="Abschicken">
+    </form>
+  <script src="formValidation.js"></script>
+  </body>
+  </html>

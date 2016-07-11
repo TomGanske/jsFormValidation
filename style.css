@@ -1,0 +1,235 @@
+  /*
+    Author: Tom Ganske
+    Date: 03.07.2016
+    URL: http://www.ct-eye.com
+    GIT: https://github.com/TomGanske
+
+    ** OPEN-SOURCE **
+    Feel free to change or improve the code.
+    Using for commercial and private projects is allowed.
+  */
+  
+
+/* FormHack v1.2.0 (formhack.io) */
+
+/* Config ----------------------------- */
+:root {
+  
+   /* Font */
+  --fh-font-family: 'Source Sans Pro',Helvetica, sans-serif;
+  --fh-s-font-size: 0.7em;
+  --fh-m-font-size: 1.2em;
+  --fh-l-font-size: 2em;
+  --fh-font-color:  rgb(40, 40, 40);
+  --fh-font-weight: 400;
+
+  /* Font Colors  --------------------- */
+  --fh-grey-color:#ccc;
+  --fh-white-color:#fff;
+  --fh-success-color:#227647;
+  --fh-error-color:#D93600;
+
+  /* Background Colors --------------------------- */
+  --fh-grey-background:#f3f5f6;
+  --fh-white-background:#fff;
+
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+body {
+  background:var(--fh-grey-background);
+}
+
+label,fieldset {
+  display: block;
+  position:relative;
+  font-family: var(--fh-font-family);
+  margin-bottom:10px;
+  background:var(--fh-white-background);
+  border:none;
+  overflow: hidden;
+  font-weight: var(--fh-font-weight);
+}
+
+.icon-user {
+  margin-left: 10px;
+  margin-top: 4px;
+  position: absolute;
+}
+
+.icon-check:before {
+  content: "\2713";
+  display: inline-block;
+  margin-left:-1.3em;
+  position:absolute;
+}
+
+.fieldWithIcon {
+  padding-left:40px;
+}
+
+.required:after {
+  content:'*';
+  font-size:var(--fh-l-font-size);
+  color:red;
+  position:absolute;
+  right:10px;
+  top:20px;
+}
+
+.valid:after {
+  content: '\2713'!important;
+  color:#227647;
+  font-size:1.3em;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+
+
+span {
+  color: var(--fh-grey-color);
+  font-size: var(--fh-s-font-size);
+  font-weight: var(--fh-font-weight);
+  display: block;
+  letter-spacing:.2em;
+  text-transform: uppercase;
+  padding: 10px 10px 0 10px;
+}
+
+input:not([type="submit"]), select, :required { 
+  background: var(--fh-white-background);
+  border-bottom: var(--fh-grey-color) solid 1px;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  box-shadow:none;
+  font-size: var(--fh-m-font-size);
+  outline: none;
+  width: 100%;
+  display:block;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 5px 10px 10px 10px;
+  margin: 0;
+}
+
+input[type="submit"] {
+  margin-top:15px;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  border-bottom:solid 1px var(--fh-error-color);
+}
+
+.select-wrapper:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #666;
+  position: absolute;
+  right: 30px;
+  top: 8px;
+  pointer-events: none;
+}
+
+select {
+  background: #eee;
+  border: 0 !important;
+  border-radius: 0;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  text-indent: 0.01px;
+  text-overflow: "";
+  font-size: inherit;
+  line-height: inherit;
+  width: 100%;
+}
+select::-ms-expand {
+  display: none;
+}
+
+input[type="submit"] {
+  background: var(--fh-white-background);
+  border: var(--fh-grey-color) solid 1px;
+  padding: 10px;
+  display:block;
+  margin-top:25px;
+  border-radius:0;
+  transition:border-radius .7s ease-in-out;
+}
+input[type="submit"]:hover {
+  background: linear-gradient(left, var(--fh-grey-color),var(--fh-white-background));
+  opacity:1;
+  transition:background .7s ease-in-out, opacity .7s ease-in-out;
+}
+
+.c-radio span,.c-checkbox span {
+  padding:10px 0;
+}
+.c-radio input[type="radio"],
+.c-checkbox input[type="checkbox"] {
+  display:inline-block;
+  width:auto;
+  margin:3px 10px;
+}
+
+.c-checkbox .required:after,
+.c-checkbox .valid:after  {
+  top:auto;
+}
+
+
+
+.rules {
+  background:rgba(0,0,0,.77);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  max-height: 0;
+
+}
+
+.rules li {
+  color:var(--fh-white-color);
+  font-size: .9em;
+  margin-left:3em;
+  line-height:2em;
+}
+.rules li.icon-check {
+  list-style: none;
+}
+
+input:not([type="submit"]):focus ~ .rules,
+input:not([type="submit"]):active ~ .rules,
+textarea:focus ~ .rules,
+textarea:active ~ .rules {
+  max-height: 1000px;
+  transition: max-height .7s ease-in;
+}
+
+input:not([type="submit"]):valid,
+textarea:valid  {
+  border-bottom:var(--fh-success-color) solid 4px;
+}
+
+input:not([type="submit"]):invalid,
+textarea:invalid  {
+  border-bottom:var(--fh-error-color)solid 1px;
+}
