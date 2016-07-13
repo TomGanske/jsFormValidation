@@ -4,10 +4,8 @@
 - Date 16. July 2016
 - Author Tom Ganske
 
-[![Author](http://ct-eye.com)](http://ct-eye.com)
-[![Source](https://github.com/TomGanske/jsFormValidation)](https://github.com/TomGanske/jsFormValidation)
 
-## Improve your Front-End form behavior with jsFormValidation (no jQuery!)
+## Realtime form validation with jsFormValidation.js (no jQuery!)
 
 Thats the first version of jsFormValidation with a size of **4KB** if minimized and will be improved.
 **jsFormValidation** field support:
