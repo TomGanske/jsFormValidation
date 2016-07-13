@@ -1,13 +1,13 @@
 # jsFormValidation Repository
 
-- Version 1.0.0
+- Version 1.0.2
 - Date 16. July 2016
 - Author Tom Ganske
 
 
 ## Improve your Front-End form behavior with jsFormValidation (no jQuery!)
 
-Thats the first version of jsFormValidation with a size of **4KB** and will be improved.
+Thats the first version of jsFormValidation with a size of **4KB** if minimized and will be improved.
 **jsFormValidation** field support:
 - text
 - date
