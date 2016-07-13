@@ -91,7 +91,9 @@ By **deactivated javascript** the standard behavior off **css** will be replaced
 
 ## Motivation
 
-Most forms are validate on server side. Thats truly a bad scenario in the mobile world. Thats the reason why I wrote this script to prevent this mistakes.
+Most forms are validate on server side. Thats truly a bad scenario in the mobile world.
+Thats the reason why I wrote this script to make forms better in the future and
+improve the usability.
 
 
 ## Installation
