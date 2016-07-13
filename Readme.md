@@ -98,13 +98,18 @@ improve the usability.
 
 ## Installation
 
-1. Init form by setup a form id. Example: < form **id="demo"** >
-2. Suround your input form element by the label tag
-3. Set the **class="required"** attribute to the label tag, required will be replaced by valid if the form is checked true 
-3. Every form element get the **selectFunction(this)** methode depends on there action ie. onclick, onchange, onkeyup and so on
-4. Open formValidation.js file and go to the function definition **selectFunction** and add your form element to the switch loop as a own case.
-	ie.: case "firstname"     : textFunc(ele,eValue,inputLength,minLength,maxLength,rules);break;
-5. Depends on the form field you should set attributes like minlength, maxlength, pattern
+1. set a id to your form
+   ```html < form **id="demo"** > ```
+2. set the required attribute for every mandatory form element
+3. suround your input form elements by the **label** tag,
+   exception are select fields or radio and checkbox groups 
+4. Set **class="required"** attribute to the label tag, required will be replaced later by valid if the form field is true 
+5. every form element get the **selectFunction(this)** methode depends on there action, methods: onclick, onchange, onkeyup
+6. **open jsFormValidation.js** file and go to the function definition **selectFunction** and registry your form element to the switch loop as a own case with the right method. ie.: 
+  ```javascript
+  case "firstname"     : textFunc(ele,eValue,inputLength,minLength,maxLength,rules);break;
+  ```
+7. depends on the form field you should set attributes like minlength, maxlength, pattern and so on and if you are not sure see the JS methode which attributes are needed
 
 
 ## License
