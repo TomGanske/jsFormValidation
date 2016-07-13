@@ -31,57 +31,63 @@ By **deactivated javascript** the standard behavior off **css** will be replaced
 #####STANDARD FORM FIELD DEFINITION
 ```html
 <label for="field" class="required">
-      <span>Field</span>
-      <input type="password" id="field" minlength="8" maxlength="35" onkeyup="selectFunction(this)" autocomplete="off" required>
-      <ul class="rules">
-        <li>min. 8 char</li>
-        <li>upper- and lower chars</li>
-        <li>min. one special sign</li>
-      </ul>
-    </label>
+ <span>Field</span>
+ <input type="password" id="field" minlength="8" maxlength="35" 
+        onkeyup="selectFunction(this)" autocomplete="off" required>
+ <ul class="rules">
+  <li>min. 8 char</li>
+  <li>upper- and lower chars</li>
+  <li>min. one special sign</li>
+ </ul>
+</label>
 ```
 
-	**SELECT FIELD DEFINITION**
-	<label for="field" class="required">
-      <span>Field</span>
-      <div class="select-wrapper required">
-        <select id="field" onchange="selectFunction(this)" required>
-          <option selected></option>
-          <option>Case 1</option>
-          <option>...</option>
-        </select>
-      </div>
-      <ul class="rules">
-        <li>min. 1 selection</li>
-      </ul>
-    </label>
+#####SELECT FIELD DEFINITION
+```html
+<label for="field" class="required">
+ <span>Field</span>
+ <div class="select-wrapper required">
+  <select id="field" onchange="selectFunction(this)" required>
+   <option selected></option>
+   <option>Case 1</option>
+   <option>...</option>
+  </select>
+ </div>
+ <ul class="rules">
+  <li>min. 1 selection</li>
+ </ul>
+</label>
+```
 
-    **FIELDSET CHECKBOX DEFINITION**
-    <fieldset class="c-checkbox">
-      <span>Field</span>
-      <label for="checkbox" class="required">
-        <input type="checkbox" id="checkbox" value="agb" name="agb" onclick="selectFunction(this)" required>
-        Checkbox Label
-      </label>
-      <label for="checkbox2" class="required">
-        <input type="checkbox" id="checkbox2" value="wr" name="wr" onclick="selectFunction(this)" required>
-        Checkbox Label 2
-      </label>
-    </fieldset>
+#####FIELDSET CHECKBOX DEFINITION
+```html
+<fieldset class="c-checkbox">
+ <span>Field</span>
+ <label for="checkbox" class="required">
+  <input type="checkbox" id="checkbox" value="agb" name="agb" onclick="selectFunction(this)" required>
+  Checkbox Label
+ </label>
+ <label for="checkbox2" class="required">
+  <input type="checkbox" id="checkbox2" value="wr" name="wr" onclick="selectFunction(this)" required>
+  Checkbox Label 2
+ </label>
+</fieldset>
+```
 
-    **FIELDSET RADIO DEFINITION**
-    <fieldset class="c-radio required">
-      <span>Field</span>
-      <label for="radio3">
-        <input type="radio" id="radio3" value="MS" name="radio" onclick="selectFunction(this)" required>
-        Radio
-      </label>
-      <label for="radio4">
-        <input type="radio" id="radio4" value="PP" name="radio" onclick="selectFunction(this)">
-        Radio 2
-      </label>
-    </fieldset>
-
+#####FIELDSET RADIO DEFINITION
+```html
+<fieldset class="c-radio required">
+ <span>Field</span>
+ <label for="radio3">
+  <input type="radio" id="radio3" value="MS" name="radio" onclick="selectFunction(this)" required>
+  Radio
+ </label>
+ <label for="radio4">
+  <input type="radio" id="radio4" value="PP" name="radio" onclick="selectFunction(this)">
+  Radio 2
+ </label>
+</fieldset>
+```
 
 ## Motivation
 
