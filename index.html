@@ -9,6 +9,14 @@
   <h1>Form Validation</h1>
   <form id="demoForm">
 
+    <label for="number" class="required">
+      <span>Number</span>
+      <input type="number" id="number" onkeyup="selectFunction(this)" minlength="2" maxlength="2" required>
+      <ul class="rules">
+        <li>min. 2 Zeichen</li>
+        <li>nur Zahlen erlaubt</li>
+      </ul>
+    </label>
 
     <label for="topic" class="required">
       <span>Topic</span>
@@ -108,6 +116,6 @@
     </fieldset>
       <input type="submit" value="Abschicken">
     </form>
-  <script src="formValidation.js"></script>
+  <script src="jsFormValidation.js"></script>
   </body>
   </html>

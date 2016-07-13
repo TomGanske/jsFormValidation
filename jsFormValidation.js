@@ -3,6 +3,7 @@
     Date: 11.07.2016
     URL: http://www.ct-eye.com
     GIT: https://github.com/TomGanske
+    Version 1.0.2
 
     ** OPEN-SOURCE **
     Feel free to change or improve the code.
@@ -44,8 +45,10 @@
       	rules       = (ele.nodeName !== "SELECT" && ele.type !== "radio" && ele.type !== "checkbox") ? ele.nextSibling.nextSibling.children : '',
         submit      = ele.parentNode.parentNode.parentNode.parentNode.querySelector('input[type="submit"]');
 
+        console.log(eleId);
     // set fields
   	switch(eleId) {
+     case "number"        : numberFunc(ele,eValue,inputLength,minLength,maxLength,rules); break;
      case "topic"         : selectFunc(ele); break;
      case "firstname"     : textFunc(ele,eValue,inputLength,minLength,maxLength,rules);break;
      case "email"         : textFunc(ele,eValue,inputLength,minLength,maxLength,rules);break;
@@ -136,7 +139,7 @@
     // Names + E-Mail
     function textFunc(ele,eValue,inputLength,minLength,maxLength,rules) {
 
-        var isValidString = false,isLength = false;
+        var isValidString = false;
 
         // check only strings permitted and E-Mail`s
         if(checkString(ele,eValue)) {
@@ -150,6 +153,24 @@
         // set formValide for entry
         if(checkLength(ele,eValue,inputLength,minLength,maxLength,rules,0) && isValidString)
             setFieldValid(ele.id,true);
+        else
+            setFieldValid(ele.id,false);
+    }
+
+    // Number
+    function numberFunc(ele,eValue,inputLength,minLength,maxLength,rules) {
+        var bIsNumber=false;
+        if(!eValue.match(regStandardNumber)) {
+            setRules(rules,1,"error");
+        }
+        else {
+            setRules(rules,1,"success");
+            bIsNumber=true;
+        }
+
+        // set formValide for entry
+        if(checkLength(ele,eValue,inputLength,minLength,maxLength,rules,0) && bIsNumber)
+            setFieldValid(ele.id,true)
         else
             setFieldValid(ele.id,false);
     }
@@ -526,8 +547,10 @@
                 for(items in array[key]){
                     if(array[key][items])
                         array[key]['submit'] = true;
-                    else
+                    else {
                         array[key]['submit'] = false;
+                        return;
+                    }
                 }
             }
             if (array[key]['submit']) {
