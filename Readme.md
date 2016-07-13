@@ -1,4 +1,4 @@
-# jsFormValidation Repository
+# jsFormValidation
 
 - Version 1.0.2
 - Date 16. July 2016
