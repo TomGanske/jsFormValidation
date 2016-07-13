@@ -4,6 +4,8 @@
 - Date 16. July 2016
 - Author Tom Ganske
 
+[![Author](http://ct-eye.com)](http://ct-eye.com)
+[![Source](https://github.com/TomGanske/jsFormValidation)](https://github.com/TomGanske/jsFormValidation)
 
 ## Improve your Front-End form behavior with jsFormValidation (no jQuery!)
 
