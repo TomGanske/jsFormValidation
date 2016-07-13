@@ -26,7 +26,7 @@ jsFormValidaton supports also multiple form definitions on one website.
 By **deactivated javascript** the standard behavior off **css** will be replaced the functionality.
 
 
-## Code Example
+## Code Examples
 
 	**STANDARD FORM FIELD DEFINITION**
 	<label for="field" class="required">
