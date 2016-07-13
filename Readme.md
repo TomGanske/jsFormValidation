@@ -29,7 +29,7 @@ By **deactivated javascript** the standard behavior off **css** will be replaced
 ## Code Examples
 
 	**STANDARD FORM FIELD DEFINITION**
-	<label for="field" class="required">
+	´´´ <label for="field" class="required">
       <span>Field</span>
       <input type="password" id="field" minlength="8" maxlength="35" onkeyup="selectFunction(this)" autocomplete="off" required>
       <ul class="rules">
@@ -40,7 +40,7 @@ By **deactivated javascript** the standard behavior off **css** will be replaced
     </label>
 
 	**SELECT FIELD DEFINITION**
-	<label for="field" **class="required"**>
+	<label for="field" class="required">
       <span>Field</span>
       <div class="select-wrapper required">
         <select id="field" onchange="selectFunction(this)" required>
