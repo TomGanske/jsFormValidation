@@ -28,8 +28,9 @@ By **deactivated javascript** the standard behavior off **css** will be replaced
 
 ## Code Examples
 
-	**STANDARD FORM FIELD DEFINITION**
-	´´´ <label for="field" class="required">
+#####STANDARD FORM FIELD DEFINITION
+```html
+<label for="field" class="required">
       <span>Field</span>
       <input type="password" id="field" minlength="8" maxlength="35" onkeyup="selectFunction(this)" autocomplete="off" required>
       <ul class="rules">
@@ -38,6 +39,7 @@ By **deactivated javascript** the standard behavior off **css** will be replaced
         <li>min. one special sign</li>
       </ul>
     </label>
+```
 
 	**SELECT FIELD DEFINITION**
 	<label for="field" class="required">
