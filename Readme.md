@@ -99,7 +99,7 @@ improve the usability.
 ## Installation
 
 1. set a id to your form
-   ```html < form **id="demo"** > ```
+   ```html < form id="demo" > ```
 2. set the required attribute for every mandatory form element
 3. suround your input form elements by the **label** tag,
    exception are select fields or radio and checkbox groups 
