@@ -159,8 +159,9 @@
 
     // Number
     function numberFunc(ele,eValue,inputLength,minLength,maxLength,rules) {
-        var bIsNumber=false;
+        var bIsNumber=false; 
         if(!eValue.match(regStandardNumber)) {
+            ele.value = eValue.substring(0, eValue.length - 1);
             setRules(rules,1,"error");
         }
         else {
