@@ -1,13 +1,7 @@
  /*
-    Author: Tom Ganske
-    Date: 11.07.2016
-    URL: http://www.ct-eye.com
-    GIT: https://github.com/TomGanske
+    Copyright (c) 2016 Tom Ganske - https://github.com/TomGanske/jsFormValidation
+    License: MIT (http://www.opensource.org/licenses/mit-license.php)
     Version 1.0.3
-
-    ** OPEN-SOURCE **
-    Feel free to change or improve the code.
-    It`s free to use it in commercial and projects.
   */
 
 (function () {
@@ -566,6 +560,4 @@
 
  window.onload = function () {
      init();
- };
-
- 
+ }; 
