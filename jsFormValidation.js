@@ -3,7 +3,7 @@
     Date: 11.07.2016
     URL: http://www.ct-eye.com
     GIT: https://github.com/TomGanske
-    Version 1.0.2
+    Version 1.0.3
 
     ** OPEN-SOURCE **
     Feel free to change or improve the code.
@@ -37,6 +37,7 @@
   // Registry your FIELD inside the SWITCH LOOP and set the right function which should be called
   // to check the input value and dependencies
   selectFunction = function(ele) {
+
       var eleId       = (ele.type === "radio" || ele.type === "checkbox") ? ele.name : ele.id,
   	    eValue      = ele.value,
       	maxLength   = (ele.hasAttribute("max")) ? parseInt(ele.getAttribute("max").length) : (ele.hasAttribute("maxlength")) ? parseInt(ele.getAttribute("maxlength")) : 0,
@@ -45,7 +46,6 @@
       	rules       = (ele.nodeName !== "SELECT" && ele.type !== "radio" && ele.type !== "checkbox") ? ele.nextSibling.nextSibling.children : '',
         submit      = ele.parentNode.parentNode.parentNode.parentNode.querySelector('input[type="submit"]');
 
-        console.log(eleId);
     // set fields
   	switch(eleId) {
      case "number"        : numberFunc(ele,eValue,inputLength,minLength,maxLength,rules); break;
@@ -148,6 +148,7 @@
         }
         else {
             setRules(rules,1,"error");
+            return;
         }
 
         // set formValide for entry
@@ -316,20 +317,15 @@
 
         // detect numbers or special chars
         var matchNumbers = eValue.match(regStandardNumber);
-        var matchSpChars = eValue.match(regExExtend,'');
-
+        var matchSpChars = eValue.match(regExExtend);
 
         // numbers or special chars detected, remove last entry
         if(matchNumbers !== null || matchSpChars !== null ) {
             ele.value = eValue.toString().substring(0,eValue.length-1);
             return false;
         }
-        else if(isNaN(Number(eValue))) {
-            return true;
-        }
         else {
-            ele.value = "";
-            return false;
+            return true;
         }
     }
 
@@ -571,3 +567,5 @@
  window.onload = function () {
      init();
  };
+
+ 

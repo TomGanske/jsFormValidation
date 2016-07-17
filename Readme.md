@@ -1,7 +1,7 @@
 # jsFormValidation
 
-- Version 1.0.2
-- Date 16. July 2016
+- Version 1.0.3
+- Date 17. July 2016
 - Author Tom Ganske
 
 
