@@ -116,4 +116,4 @@ improve the usability.
 
 ## License
 
-Open Source project. Feel free to use it for commercial and private use. No licence provided.
+MIT
