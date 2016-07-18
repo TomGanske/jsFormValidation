@@ -38,6 +38,7 @@
         minLength   = (ele.hasAttribute("min")) ? parseInt(ele.getAttribute("min").length): (ele.hasAttribute("maxlength")) ? parseInt(ele.getAttribute("minlength")) : 0,
       	inputLength = eValue.toString().length,
       	rules       = (ele.nodeName !== "SELECT" && ele.type !== "radio" && ele.type !== "checkbox") ? ele.nextSibling.nextSibling.children : '',
+        parentFormId= ele.parentNode.parentNode.parentNode.parentNode.querySelector('form').id,
         submit      = ele.parentNode.parentNode.parentNode.parentNode.querySelector('input[type="submit"]');
 
     // set fields
@@ -531,28 +532,25 @@
     }
 
     // set form Valid and Submit to disabled true/false
-    function formValid(submit) {
-        var key,items;
-        for (key in array) {
-            if(array[key].hasOwnProperty('submit')) {
-                for(items in array[key]){
-                    if(array[key][items])
-                        array[key]['submit'] = true;
-                    else {
-                        array[key]['submit'] = false;
-                        return;
-                    }
+    function formValid(submit,parentFormId) {
+        var items;
+
+        if(array[parentFormId].hasOwnProperty('submit')) {
+            for(items in array[parentFormId]){
+                if(array[parentFormId][items]) {
+                    array[parentFormId]['submit'] = true;
+                }
+                else {
+                    array[parentFormId]['submit'] = false;
+                    submit.setAttribute("disabled", "");
+                    return;
                 }
             }
-            if (array[key]['submit']) {
-                submit.removeAttribute("disabled","");
-                return;
-            }
-            else {
-                if(submit !== null)
-                    submit.setAttribute("disabled", "");
-                return;
-            }
+        }
+        
+        if (array[parentFormId]['submit']) {
+            submit.removeAttribute("disabled","");
+            return;
         }
     }
 })();
