@@ -38,8 +38,15 @@
         minLength   = (ele.hasAttribute("min")) ? parseInt(ele.getAttribute("min").length): (ele.hasAttribute("maxlength")) ? parseInt(ele.getAttribute("minlength")) : 0,
       	inputLength = eValue.toString().length,
       	rules       = (ele.nodeName !== "SELECT" && ele.type !== "radio" && ele.type !== "checkbox") ? ele.nextSibling.nextSibling.children : '',
-        parentFormId= ele.parentNode.parentNode.parentNode.parentNode.querySelector('form').id,
-        submit      = ele.parentNode.parentNode.parentNode.parentNode.querySelector('input[type="submit"]');
+        submit      = ele.parentNode.parentNode.parentNode.parentNode.querySelector('input[type="submit"]'),
+        parentFormId= '',
+        parentItems = ['select-one','select-multiple','radio','checkbox'];
+
+    
+    if(parentItems.indexOf(ele.type)!== -1)
+        parentFormId = ele.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector('form').id;
+    else
+        parentFormId = ele.parentNode.parentNode.parentNode.parentNode.querySelector('form').id;
 
     // set fields
   	switch(eleId) {
