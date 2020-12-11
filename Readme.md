@@ -2,9 +2,8 @@
 
 - Version 1.0.3
 - Update  17. July 2016
-- Author  Tom Ganske
+- Author  Tom Hell
 - License MIT
-- URL     http://ct-eye.com
 
 
 ## Realtime form validation with jsFormValidation.js (no jQuery!)
